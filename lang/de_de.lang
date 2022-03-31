@@ -1,11 +1,6 @@
-girocode_title: girocode-Addon
+girocode_title = Girocode
 
-# FriendsOfREDAXO-Addons können bei YTraduco zur Übersetzung eingereicht werden
+girocode_generator = QR Code generieren
+girocode_settings = Standard-Einstellungen
 
-# Konfigurationsformulare
-girocode_config_field_label = Test-Feld
-girocode_config_field_notice = Notiz, die etwas erklärt und bspw. einen Standardwert nennt. Hier: <code>Test</code>
-
-# YForm Tablelen-Übersetzung
-girocode_table_name_label = Name
-girocode_table_name_notice = Notiz, die etwas erklärt und auch einen Beispielwert nennen kann, z.B.: <code>Mein Name</code> 
+girocode_docs = Hilfe

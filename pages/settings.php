@@ -1,7 +1,5 @@
 <?php
 
-echo rex_view::title(rex_i18n::msg('girocode'));
-
 $form = rex_config_form::factory($this->getProperty('package'));
 
 $field = $form->addInputField('text', 'name', null, ["class" => "form-control"]);
