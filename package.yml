@@ -25,7 +25,7 @@ pages:
         perm: girocode[docs]
 
 default_config:
-    name: 'Max Müller'
-    iban: 'DEXXXXXXXXXXXXXXXXXXXXXX'
-    bic: 'XXXXXXXXXXX'
-    description: ''
+    name: 'T. REDAXO'
+    iban: 'REXXXXXXXXXXXXXXXXXXXXXX'
+    bic: 'RAWRRRRRRRR'
+    description: 'Spende'
