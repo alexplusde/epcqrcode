@@ -45,27 +45,27 @@ Alle weiteren Methoden und Infos zur Generierung: Siehe auch https://github.com/
 > You can get the code as base 64:
 
 ```php
-$base64 = $bezahlcode->generateBase64(); // Specified filetypes can be: jpg, png, gif; defaults to jpg
-echo "<img src='$base64' alt='Bezahlcode' />";
+$base64 = $girocode->generateBase64(); jpg, png, gif
+echo '<img src="'.$base64.'" alt="" />';
 ```
 
 > or save the code as image file
 
 ```php
-$bezahlcode->saveImage("output.jpg");
-$bezahlcode->saveImage("output.png", "png"); // Specified filetypes can be: jpg, png, gif; defaults to jpg
+$girocode->saveImage("output.jpg");
+$girocode->saveImage("output.png", "png"); // jpg, png, gif
 ```
 
 > or output the Bezahlcode to the webbrowser
 
 ```php
-$bezahlcode->outputImage();
-$bezahlcode->outputImage("jpg"); // Specified filetypes can be: jpg, png, gif; defaults to jpg
+$girocode->outputImage();
+$girocode->outputImage("jpg"); // jpg, png, gif
 ```
 
 ## Lizenz
 
-LGPL 3 Lizenz, siehe [LICENSE](https://github.com/alexplusde/girocode/blob/master/LICENSE)  
+LGPL Lizenz, siehe [LICENSE](https://github.com/alexplusde/girocode/blob/master/LICENSE)  
 
 ## Autoren
 
