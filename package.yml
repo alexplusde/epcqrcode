@@ -1,0 +1,39 @@
+package: girocode 
+version: '1.0.0'
+author: 'Alexander Walther' 
+supportpage: https://github.com/alexplusde/girocode
+
+requires:
+    php:
+        version: '>7.3,<9'
+    redaxo: ^5.9
+
+page:
+    title: translate:girocode_title
+    icon: rex-icon fa-gear
+
+pages:
+    girocode:
+        title: translate:girocode_title
+        perm: girocode[]
+        subpages:
+            generator:
+                title: translate:girocode_generator
+                icon: rex-icon fa-gear
+                perm: admin
+            settings:
+                title: translate:girocode_settings
+                icon: rex-icon fa-gear
+                perm: admin
+            docs:
+                title: translate:girocode_docs
+                subPath: README.md 
+                icon: rex-icon fa-info-circle
+                itemclass: pull-right
+                perm: girocode[docs]
+
+default_config:
+    name: 'Max Müller'
+    iban: 'DEXXXXXXXXXXXXXXXXXXXXXX'
+    bic: 'XXXXXXXXXXX'
+    description: ''
