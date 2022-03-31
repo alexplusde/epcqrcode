@@ -1,6 +1,6 @@
+girocode = Girocode
 girocode_title = Girocode
 
-girocode_generator = QR Code generieren
 girocode_settings = Standard-Einstellungen
 
 girocode_docs = Hilfe

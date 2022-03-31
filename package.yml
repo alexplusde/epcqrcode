@@ -13,10 +13,6 @@ page:
     icon: rex-icon fa-gear
 
 pages:
-    generator:
-        title: translate:girocode_generator
-        icon: rex-icon fa-gear
-        perm: admin
     settings:
         title: translate:girocode_settings
         icon: rex-icon fa-gear

@@ -10,11 +10,21 @@ Macht, was es soll. Generiert QR-Codes, die von Giro-Code kompatiblen Banking-Ap
 
 ## Einstellungs-Seite
 
-Lege Standard-Angaben fest, um den Link zu Verkürzen.
+Lege Standard-Angaben fest, um den Link zu verkürzen.
 
 ## Nutzung
 
-Die einzelnen Parameter:
+Rufe über die REX-API folgende URL im Frontend auf, um einen QR-Code zu erhalten:
+
+`https://example.org/?rex-api-call=girocode&iban=DEXXXXXXXXXXXXXXXXXXXX&amount=1234.56&description=Mein%20Verwendungszweck`
+
+Wenn Voreinstellungen gewählt sind (IBAN, BIC, Empfängername, Verwendungszweck) lässt sich die URL au den Betrag verkürzen:
+
+`https://example.org/?rex-api-call=girocode&amount=1234.56`
+
+Der QR-Code kann dann von einer Girocode-kompatiblen App bei einer Überweisung eingescannt werden.
+
+## Die einzelnen Parameter
 
 | Parameter    | Bedeutung                                                                                 |
 | ------------ | ----------------------------------------------------------------------------------------- |
@@ -34,21 +44,21 @@ Alle weiteren Methoden und Infos zur Generierung: Siehe auch https://github.com/
 
 > You can get the code as base 64:
 
-```
+```php
 $base64 = $bezahlcode->generateBase64(); // Specified filetypes can be: jpg, png, gif; defaults to jpg
 echo "<img src='$base64' alt='Bezahlcode' />";
 ```
 
 > or save the code as image file
 
-```
+```php
 $bezahlcode->saveImage("output.jpg");
 $bezahlcode->saveImage("output.png", "png"); // Specified filetypes can be: jpg, png, gif; defaults to jpg
 ```
 
 > or output the Bezahlcode to the webbrowser
 
-```
+```php
 $bezahlcode->outputImage();
 $bezahlcode->outputImage("jpg"); // Specified filetypes can be: jpg, png, gif; defaults to jpg
 ```

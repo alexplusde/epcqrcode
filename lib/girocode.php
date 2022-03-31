@@ -1,9 +1,9 @@
 <?php
 class girocode extends Bezahlcode
 {
-    public static function factory($iban = null, $bic = null, $name = "", $description = "", $amount = 0, $type = "phpqrcode") {
-        $bezahlcode = new girocode(rex_request('iban', 'string', $iban), rex_request('bic', 'string', $bic), rex_request('name', 'string', $name), $type, false);
-        $bezahlcode->generatePayload(rex_request('description', 'string', $description), rex_request('amount', "float", $amount));
+    public static function factory($iban = "", $bic = "", $name = "", $description = "", $amount = 0, $type = "phpqrcode") {
+        $bezahlcode = new girocode($iban, $bic, $name, $type, false);
+        $bezahlcode->generatePayload($description, $amount);
 
         return $bezahlcode;
     }
