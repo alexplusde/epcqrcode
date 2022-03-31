@@ -65,7 +65,7 @@ $bezahlcode->outputImage("jpg"); // Specified filetypes can be: jpg, png, gif; d
 
 ## Lizenz
 
-LGPL 3 Lizenz, siehe [LICENSE.md](https://github.com/alexplusde/girocode/blob/master/LICENSE.md)  
+LGPL 3 Lizenz, siehe [LICENSE](https://github.com/alexplusde/girocode/blob/master/LICENSE)  
 
 ## Autoren
 
