@@ -65,7 +65,7 @@ $girocode->outputImage("jpg"); // jpg, png, gif
 
 ## Lizenz
 
-LGPL Lizenz, siehe [LICENSE](https://github.com/alexplusde/girocode/blob/master/LICENSE)  
+MIT Lizenz, siehe [LICENSE](https://github.com/alexplusde/girocode/blob/master/LICENSE)  
 
 ## Autoren
 
