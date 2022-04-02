@@ -1,7 +1,7 @@
-package: girocode 
+package: epcqrcode 
 version: '1.0.0'
 author: 'Alexander Walther' 
-supportpage: https://github.com/alexplusde/girocode
+supportpage: https://github.com/alexplusde/epcqrcode
 
 requires:
     php:
@@ -9,20 +9,20 @@ requires:
     redaxo: ^5.9
 
 page:
-    title: translate:girocode_title
+    title: translate:epcqrcode_title
     icon: rex-icon fa-gear
 
 pages:
     settings:
-        title: translate:girocode_settings
+        title: translate:epcqrcode_settings
         icon: rex-icon fa-gear
         perm: admin
     docs:
-        title: translate:girocode_docs
+        title: translate:epcqrcode_docs
         subPath: README.md 
         icon: rex-icon fa-info-circle
         itemclass: pull-right
-        perm: girocode[docs]
+        perm: epcqrcode[docs]
 
 default_config:
     name: 'T. REDAXO'

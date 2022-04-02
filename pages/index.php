@@ -1,4 +1,4 @@
 <?php
 
-echo rex_view::title(rex_i18n::msg('girocode'));
+echo rex_view::title(rex_i18n::msg('epcqrcode'));
 rex_be_controller::includeCurrentPageSubPath();

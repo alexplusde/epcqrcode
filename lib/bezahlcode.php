@@ -48,7 +48,7 @@
 			$this->use_frame = $use_frame;
 			
 			if ($qrprovider == "phpqrcode") {
-				if (!file_exists(rex_path::addon('girocode', "lib/phpqrcode.php"))) {
+				if (!file_exists(rex_path::addon('epcqrcode', "lib/phpqrcode.php"))) {
 					die("PHPQRCODE was selected as QR-Code provider, but phpqrcode.php was not found at the specified path. Please set the variable to the path.");
 				}
 				if (!class_exists("QRcode")) {
