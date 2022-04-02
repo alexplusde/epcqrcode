@@ -1,4 +1,4 @@
-# girocode - REDAXO-Addon für Girocode-kompatible QR-Codes
+# EPC-QR-Code - REDAXO-Addon für GiroCode-kompatible QR-Codes
 
 Macht, was es soll. Generiert QR-Codes, die von Giro-Code kompatiblen Banking-Apps in einer Überweisung genutzt werden können.
 
