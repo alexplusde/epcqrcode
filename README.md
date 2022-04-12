@@ -1,20 +1,19 @@
-# EPC-QR-Code - REDAXO-Addon für GiroCode™️-kompatible QR-Codes
+# EPC-QR-Code - REDAXO-Addon für GiroCode-kompatible EPC-QR-Codes
 
 Macht, was es soll. Generiert QR-Codes, die von Giro-Code kompatiblen Banking-Apps in einer Überweisung genutzt werden können.
 
 ## Features
 
-* QR-Code als PDF
+* EPC-QR-Code zur Verwendung ins PDFs oder auf der Website
 * Generierung lokal oder über Google
-* Formular zum Generieren der QR-Code-Links
-
+* 
 ## Einstellungs-Seite
 
 Lege Standard-Angaben fest, um den Link zu verkürzen.
 
 ## Nutzung
 
-Rufe über die REX-API folgende URL im Frontend auf, um einen QR-Code zu erhalten:
+Rufe über die REX-API folgende URL im Frontend auf, um einen EPC-QR-Code zu erhalten:
 
 `https://example.org/?rex-api-call=epcqrcode&iban=DEXXXXXXXXXXXXXXXXXXXX&amount=1234.56&description=Mein%20Verwendungszweck`
 
@@ -22,7 +21,7 @@ Wenn Voreinstellungen gewählt sind (IBAN, BIC, Empfängername, Verwendungszweck
 
 `https://example.org/?rex-api-call=epcqrcode&amount=1234.56`
 
-Der QR-Code kann dann von einer GiroCode™️™️-kompatiblen App bei einer Überweisung eingescannt werden.
+Der EPC-QR-Code kann dann von einer GiroCode-kompatiblen App bei einer Überweisung eingescannt werden.
 
 ## Die einzelnen Parameter
 
