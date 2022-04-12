@@ -1,5 +1,5 @@
 package: epcqrcode 
-version: '1.0.1'
+version: '1.0.2'
 author: 'Alexander Walther' 
 supportpage: https://github.com/alexplusde/epcqrcode
 
@@ -10,12 +10,12 @@ requires:
 
 page:
     title: translate:epcqrcode_title
-    icon: rex-icon fa-gear
+    icon: rex-icon fa-qrcode
 
 pages:
     settings:
         title: translate:epcqrcode_settings
-        icon: rex-icon fa-gear
+        icon: rex-icon fa-qrcode
         perm: admin
     docs:
         title: translate:epcqrcode_docs
