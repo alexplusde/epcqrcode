@@ -11,18 +11,19 @@ requires:
 page:
     title: translate:epcqrcode_title
     icon: rex-icon fa-qrcode
+    perm: epcqrcode[default]
 
 pages:
     settings:
         title: translate:epcqrcode_settings
         icon: rex-icon fa-qrcode
-        perm: admin
+        perm: epcqrcode[settings]
     docs:
         title: translate:epcqrcode_docs
         subPath: README.md 
         icon: rex-icon fa-info-circle
         itemclass: pull-right
-        perm: epcqrcode[docs]
+        perm: epcqrcode[default]
 
 default_config:
     name: 'T. REDAXO'
