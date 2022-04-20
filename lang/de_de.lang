@@ -4,3 +4,6 @@ epcqrcode_title = EPC-QR-Code
 epcqrcode_settings = Standard-Einstellungen
 
 epcqrcode_docs = Hilfe
+
+epcqrcode_info_donate = Anders als die meisten Addons aus der REDAXO-Community ist die Entstehung und Weiterentwicklung dieses Addons nicht durch eigene Projekte gedeckt. Mit einer Spende oder einer Beauftragung sicherst du zusätzliche Features, die Stabilität, Funktionsumfang und Weiterentwicklung weiter verbessern können, sowie eine bessere Anleitung. 
+epcqrcode_donate = Weiterentwicklung unterstützen 
