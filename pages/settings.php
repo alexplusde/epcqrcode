@@ -2,17 +2,16 @@
 
 $form = rex_config_form::factory($this->getProperty('package'));
 
-$field = $form->addInputField('text', 'name', null, ["class" => "form-control"]);
+$field = $form->addInputField('text', 'name', null, ['class' => 'form-control']);
 $field->setLabel('Empfänger');
 
-$field = $form->addInputField('text', 'iban', null, ["class" => "form-control"]);
+$field = $form->addInputField('text', 'iban', null, ['class' => 'form-control']);
 $field->setLabel('IBAN');
 
-
-$field = $form->addInputField('text', 'bic', null, ["class" => "form-control"]);
+$field = $form->addInputField('text', 'bic', null, ['class' => 'form-control']);
 $field->setLabel('BIC');
 
-$field = $form->addInputField('text', 'description', null, ["class" => "form-control"]);
+$field = $form->addInputField('text', 'description', null, ['class' => 'form-control']);
 $field->setLabel('Verwendungszweck');
 
 $fragment = new rex_fragment();
@@ -34,7 +33,7 @@ $fragment = new rex_fragment();
 $fragment->setVar('class', 'info', false);
 $fragment->setVar('title', $this->i18n('epcqrcode_donate'), false);
 $fragment->setVar('body', '<p>' . $this->i18n('epcqrcode_info_donate') . '</p>' . $anchor, false);
-echo !rex_config::get("alexplusde", "donated") ?  $fragment->parse('core/page/section.php') : "";
+echo !rex_config::get('alexplusde', 'donated') ? $fragment->parse('core/page/section.php') : '';
 ?>
     </div>
 </div>

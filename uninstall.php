@@ -1,3 +1,3 @@
 <?php
 
-rex_config::removeNamespace("epcqrcode");
+rex_config::removeNamespace('epcqrcode');
