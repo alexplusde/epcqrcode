@@ -81,7 +81,7 @@ class Bezahlcode
     {
         $this->usage = $usage;
         $this->amount = $amount;
-        $payload = ['BCD', '001', '1', 'SCT', $this->bic, $this->name, $this->iban, 'EUR'.$amount, '', '', $usage];
+        $payload = ['BCD', '001', '1', 'SCT', $this->bic, $this->name, $this->iban, 'EUR' . $amount, '', '', $usage];
         $this->payload = implode("\n", $payload);
     }
 
@@ -117,7 +117,7 @@ class Bezahlcode
             ob_end_clean();
             $qr = imagecreatefromstring($qr);
         } elseif ('google' == $this->qrprovider) {
-            $qr = imagecreatefrompng('https://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=L|0&chl='.urlencode($this->payload));
+            $qr = imagecreatefrompng('https://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=L|0&chl=' . urlencode($this->payload));
         } else {
             exit("QRCode provider $this->qrprovider is not valid");
         }
@@ -189,7 +189,7 @@ class Bezahlcode
         imagedestroy($bezahlcode);
 
         header('Content-Type: text/html; charset=UTF-8');
-        return 'data:'.$type[0].';base64,'.base64_encode($imagedata);
+        return 'data:' . $type[0] . ';base64,' . base64_encode($imagedata);
     }
 
     /**
@@ -212,7 +212,7 @@ class Bezahlcode
         $bezahlcode = $this->getQRCode();
 
         if (empty($filename)) {
-            $filename = 'bezahlcode_'.preg_replace('/[^a-zA-Z0-9\-\_]/', '', $this->usage).'.'.$type[1];
+            $filename = 'bezahlcode_' . preg_replace('/[^a-zA-Z0-9\-\_]/', '', $this->usage) . '.' . $type[1];
         }
 
         if ('gif' == $type[1]) {
@@ -242,8 +242,8 @@ class Bezahlcode
         $type = $this->selectType($type);
         $bezahlcode = $this->getQRCode();
 
-        header('Content-type: '.$type[0]);
-        header('Content-Disposition: inline; filename=bezahlcode.'.$type[1]);
+        header('Content-type: ' . $type[0]);
+        header('Content-Disposition: inline; filename=bezahlcode.' . $type[1]);
         if ('gif' == $type[1]) {
             imagegif($bezahlcode);
         } elseif ('png' == $type[1]) {

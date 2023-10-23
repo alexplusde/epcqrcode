@@ -12,6 +12,6 @@ class epcqrcode extends Bezahlcode
 
     public function showPng()
     {
-        return '<img class="form-control" src="'.$this->generateBase64().'" alt="" />';
+        return '<img class="form-control" src="' . $this->generateBase64() . '" alt="" />';
     }
 }

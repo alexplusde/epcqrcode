@@ -202,7 +202,7 @@
             for ($a = 1; $a <= QRSPEC_VERSION_MAX; ++$a) {
                 $frame = QRspec::newFrame($a);
                 if (QR_IMAGE) {
-                    $fileName = QR_CACHE_DIR.'frame_'.$a.'.png';
+                    $fileName = QR_CACHE_DIR . 'frame_' . $a . '.png';
                     QRimage::png(self::binarize($frame), $fileName, 1, 0);
                 }
 
@@ -222,9 +222,9 @@
             if (QR_LOG_DIR !== false) {
                 if ('' != $err) {
                     if (false !== $outfile) {
-                        file_put_contents(QR_LOG_DIR.basename($outfile).'-errors.txt', date('Y-m-d H:i:s').': '.$err, FILE_APPEND);
+                        file_put_contents(QR_LOG_DIR . basename($outfile) . '-errors.txt', date('Y-m-d H:i:s') . ': ' . $err, FILE_APPEND);
                     } else {
-                        file_put_contents(QR_LOG_DIR.'errors.txt', date('Y-m-d H:i:s').': '.$err, FILE_APPEND);
+                        file_put_contents(QR_LOG_DIR . 'errors.txt', date('Y-m-d H:i:s') . ': ' . $err, FILE_APPEND);
                     }
                 }
             }
@@ -236,7 +236,7 @@
             $width = count($frame);
             for ($y = 0; $y < $width; ++$y) {
                 for ($x = 0; $x < $width; ++$x) {
-                    echo ord($frame[$y][$x]).',';
+                    echo ord($frame[$y][$x]) . ',';
                 }
             }
         }
@@ -269,7 +269,7 @@
 
             foreach ($GLOBALS['qr_time_bench'] as $markerId => $thisTime) {
                 if ($p > 0) {
-                    echo '<tr><th style="text-align:right">till '.$markerId.': </th><td>'.number_format($thisTime - $lastTime, 6).'s</td></tr>';
+                    echo '<tr><th style="text-align:right">till ' . $markerId . ': </th><td>' . number_format($thisTime - $lastTime, 6) . 's</td></tr>';
                 } else {
                     $startTime = $thisTime;
                 }
@@ -279,7 +279,7 @@
             }
 
             echo '</tbody><tfoot>
-                <tr style="border-top:2px solid black"><th style="text-align:right">TOTAL: </th><td>'.number_format($lastTime - $startTime, 6).'s</td></tr>
+                <tr style="border-top:2px solid black"><th style="text-align:right">TOTAL: </th><td>' . number_format($lastTime - $startTime, 6) . 's</td></tr>
             </tfoot>
             </table>';
         }
@@ -857,7 +857,7 @@
 
             if (!isset(self::$frames[$version])) {
 
-                $fileName = QR_CACHE_DIR.'frame_'.$version.'.dat';
+                $fileName = QR_CACHE_DIR . 'frame_' . $version . '.dat';
 
                 if (QR_CACHEABLE) {
                     if (file_exists($fileName)) {
@@ -1075,7 +1075,7 @@
             }
 
             if (!QRinput::check($mode, $size, $setData)) {
-                throw new Exception('Error m:'.$mode.',s:'.$size.',d:'.implode(',', $setData));
+                throw new Exception('Error m:' . $mode . ',s:' . $size . ',d:' . implode(',', $setData));
                 return null;
             }
 
@@ -2672,7 +2672,7 @@
                     if (ord($frame[$y][$x]) & 0x80) {
                         $bitMask[$y][$x] = 0;
                     } else {
-                        $maskFunc = call_user_func([$this, 'mask'.$maskNo], $x, $y);
+                        $maskFunc = call_user_func([$this, 'mask' . $maskNo], $x, $y);
                         $bitMask[$y][$x] = (0 == $maskFunc) ? 1 : 0;
                     }
 
@@ -2713,15 +2713,15 @@
             $b = 0;
             $bitMask = [];
 
-            $fileName = QR_CACHE_DIR.'mask_'.$maskNo.DIRECTORY_SEPARATOR.'mask_'.$width.'_'.$maskNo.'.dat';
+            $fileName = QR_CACHE_DIR . 'mask_' . $maskNo . DIRECTORY_SEPARATOR . 'mask_' . $width . '_' . $maskNo . '.dat';
 
             if (QR_CACHEABLE) {
                 if (file_exists($fileName)) {
                     $bitMask = self::unserial(file_get_contents($fileName));
                 } else {
                     $bitMask = $this->generateMaskNo($maskNo, $width, $s, $d);
-                    if (!file_exists(QR_CACHE_DIR.'mask_'.$maskNo)) {
-                        mkdir(QR_CACHE_DIR.'mask_'.$maskNo);
+                    if (!file_exists(QR_CACHE_DIR . 'mask_' . $maskNo)) {
+                        mkdir(QR_CACHE_DIR . 'mask_' . $maskNo);
                     }
                     file_put_contents($fileName, self::serial($bitMask));
                 }
@@ -3329,7 +3329,7 @@
             $enc->size = $size;
             $enc->margin = $margin;
 
-            switch ($level.'') {
+            switch ($level . '') {
                 case '0':
                 case '1':
                 case '2':
