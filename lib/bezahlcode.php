@@ -134,7 +134,6 @@ class Bezahlcode
             return $layer;
         }
         return $qr;
-
     }
 
     /**
