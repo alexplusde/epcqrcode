@@ -22,7 +22,7 @@ pages:
         title: translate:epcqrcode_docs
         subPath: README.md 
         icon: rex-icon fa-info-circle
-        itemclass: pull-right
+        itemClass: pull-right
         perm: epcqrcode[default]
 
 default_config:
